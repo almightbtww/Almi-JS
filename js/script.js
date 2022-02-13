@@ -9,6 +9,7 @@ function start () {
 
 start();
 
+
 let personalMovieDB = {
    count: numberOfFims,
    movies: {},
@@ -16,7 +17,6 @@ let personalMovieDB = {
    genres: [],
    privat: false
 };
-
 
 function remberMyFilms () {
    for (let i = 0;  i < 2; i++) {
@@ -35,7 +35,7 @@ function remberMyFilms () {
 
 remberMyFilms();
 
-function detectPersonalLvl () {
+function detectPersonalLvl() {
    if (personalMovieDB.count < 10) {
       console.log('Просмотрено довольно мало фильмов');
    } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
@@ -48,6 +48,14 @@ function detectPersonalLvl () {
 }
 
 detectPersonalLvl ();
+
+function showMyDB () {
+   if (personalMovieDB.privat == false) {
+      console.log(personalMovieDB);
+   }
+}
+
+showMyDB();
     
 
 console.log(personalMovieDB);
